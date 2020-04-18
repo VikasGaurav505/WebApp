@@ -1,0 +1,235 @@
+<html>
+<head>
+<title>The Shoe Store</title>    
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, address, phone, icons" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="style2.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style> 
+</head>
+    
+<body>
+   
+<div class="topnav">
+    <img src="logo.jpg" class="b_img">
+ <nav>
+  <ul>
+       <li><a href="signupvalid.html">Sign up</a></li>
+      <li><a href="demo.html">Checkout <i class="fa fa-credit-card"></i></a></li>
+      <li><a href="cart.html">View <i class="fa fa-shopping-cart"></i></a></li>
+      <li><a href="login.html">Login <i class="glyphicon glyphicon-user"></i></a></li>
+      <li><a class="active" href="#home">Home <i class="fa fa-home"></i></a></li>
+    </ul>
+</nav>
+  <div class="login-container">
+   
+  </div>
+</div>
+    
+<div class="content">
+  <h2> Looking for trendy footwear? Find Shoes that matches your fashion!</h2>
+    </div>
+    
+    <div class="w3-content w3-display-container" style="max-width:700px">
+        <img class="mySlides" src="slide1.jpg"  width="200px" height="400px"  style="width:100%">
+        <img class="mySlides" src="slide.png"  width="200px" height="400px"  style="width:100%">
+        <img class="mySlides" src="slide4.jpeg"  width="200px" height="400px"  style="width:100%">
+        <img class="mySlides" src="slide2.jpg"  width="200px" height="400px"  style="width:100%">
+        <img class="mySlides" src="slide3.jpg"  width="200px" height="400px"  style="width:100%">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+</script>
+    <br><br>
+<div class="row">
+    <div class="column"><h2>Our Products</h2><hr></div>
+    </div>
+    
+    
+<section class="container content-section">
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Shoe1</span>
+                    <img class="shop-item-image" src="img1.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">1299</span>
+                        <button class="btn1 btn-primary shop-item-button" type="button" autofocus onclick="alert('Item added to cart!')">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Shoe2</span>
+                    <img class="shop-item-image" src="img3.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">1499</span>
+                        <button class="btn1 btn-primary shop-item-button"type="button" autofocus onclick="alert('Item added to cart!')">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Shoe3</span>
+                    <img class="shop-item-image" src="im14.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">999</span>
+                        <button class="btn1 btn-primary shop-item-button" type="button" autofocus onclick="alert('Item added to cart!')">ADD TO CART</button>
+                    </div>
+                </div>
+                
+                
+                <div class="shop-item">
+                    <span class="shop-item-title">Shoe4</span>
+                    <img class="shop-item-image" src="img5.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">1599</span>
+                        <button class="btn1 btn-primary shop-item-button" type="button" autofocus onclick="alert('Item added to cart!')">ADD TO CART</button>
+                    </div>
+                </div>
+                
+                <div class="shop-item">
+                    <span class="shop-item-title">Shoe5</span>
+                    <img class="shop-item-image" src="img6.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">1999</span>
+                        <button class="btn1 btn-primary shop-item-button" type="button" autofocus onclick="alert('Item added to cart!')">ADD TO CART</button>
+                    </div>
+                </div>
+                
+                <div class="shop-item">
+                    <span class="shop-item-title">Shoe6</span>
+                    <img class="shop-item-image" src="img7.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">1699</span>
+                        <button class="btn1 btn-primary shop-item-button" type="button" autofocus onclick="alert('Item added to cart!')">ADD TO CART</button>
+                    </div>
+                </div>
+                
+                <div class="shop-item">
+                    <span class="shop-item-title">Shoe7</span>
+                    <img class="shop-item-image" src="img9.jpeg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">2099</span>
+                        <button class="btn1 btn-primary shop-item-button" type="button" autofocus onclick="alert('Item added to cart!')">ADD TO CART</button>
+                    </div>
+                </div>
+                
+                <div class="shop-item">
+                    <span class="shop-item-title">Shoe8</span>
+                    <img class="shop-item-image" src="im10.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">1199</span>
+                        <button class="btn1 btn-primary shop-item-button" type="button" autofocus onclick="alert('Item added to cart!')">ADD TO CART</button>
+                    </div>
+                </div>
+                
+               
+                
+                <div class="shop-item">
+                    <span class="shop-item-title">Shoe9</span>
+                    <img class="shop-item-image" src="im12.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">2199</span>
+                        <button class="btn1 btn-primary shop-item-button" type="button" autofocus onclick="alert('Item added to cart!')">ADD TO CART</button>
+                    </div>
+                </div>
+                
+                <div class="shop-item">
+                    <span class="shop-item-title">Shoe10</span>
+                    <img class="shop-item-image" src="im13.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">2499</span>
+                        <button class="btn1 btn-primary shop-item-button" type="button" autofocus onclick="alert('Item added to cart!')">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+    
+    
+    
+    <div class="main">    
+<footer class="footer-distributed">
+ 
+		<div class="footer-left">
+ 
+		<h3>Shoe<span>Store</span></h3>
+  
+		<p class="footer-links">
+	·
+		<a href="#">About</a>
+	·
+		<a href="#">Contact</a>
+		</p>
+     <br>
+		<p class="footer-company-name">theshoestore &copy; 2020</p>
+		</div>
+ 
+		<div class="footer-center">
+ 
+		<div>
+		<i class="fa fa-map-marker"></i>
+		<p><span>26 Bantala Street</span> Kolkata, India</p>
+		</div>
+ 
+		<div>
+		<i class="fa fa-phone"></i>
+		<p>+91 8000110008</p>
+		</div>
+ 
+		<div>
+		<i class="fa fa-envelope"></i>
+		<p><a href="#">contact@theshoestore4u.com</a></p>
+		</div>
+ 
+		</div>
+ 
+		<div class="footer-right">
+ 
+		<p class="footer-company-about">
+		<span>About the company</span>
+	The shoe store is a company that is known for its collection of formal &amp; trendy casual shoes.
+		</p>
+ 
+		<div class="footer-icons">
+ 
+		<a href="#"><i class="fa fa-facebook"></i></a>
+		<a href="#"><i class="fa fa-twitter"></i></a>
+		<a href="#"><i class="fa fa-linkedin"></i></a>
+		<a href="#"><i class="fa fa-github"></i></a>
+ </div>
+ </div>
+    <br></footer></div>
+    
+</body>
+</html>

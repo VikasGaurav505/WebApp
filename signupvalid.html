@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Sign Up Form</title>
+    <link href="sup.css" rel="stylesheet" type="text/css">
+
+<script>
+ function validateform()
+ {
+     var v_name=document.myform.name.value;
+     var password=document.myform.psw.value;
+     var password2=document.myform.psw_repeat.value;
+     var email=document.myform.email.value;
+     var age=document.myform.age.value;
+     var atpos=email.indexOf("@");
+     var dotpos=email.lastIndexOf(".");
+     
+     if (v_name==null || v_name=="")
+     {
+         alert("Name can't be blank");
+         document.myform.name.focus();
+         return false;
+     }
+
+     if(age==null||age=="")
+     {
+         alert("Enter your age");
+         document.myform.age.focus();
+         return false;
+     }
+
+     if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length)
+     {
+         alert("Please enter a valid e-mail address \n atpostion: "+atpos+"\n dotposition: "+dotpos);
+         document.myform.email.focus();
+         return false;
+     }
+
+     if(password.length<8)
+     {
+
+         alert("Password must be at least 8 characters long.");
+         document.myform.psw.focus();
+         return false;
+     }
+
+     if(password==password2)
+     {
+         return true;
+     }
+
+     else
+     {
+         alert("password must be same!");
+         document.myform.psw_repeat.focus();
+         return false;
+     }
+
+     return true;
+
+  }
+
+</script>
+</head>
+
+ <body>
+
+<div class="wrap">
+
+ <h1>Sign Up</h1>
+
+ <p>Please fill in this form to create an account.</p><hr>
+
+ <form action="index1.html" name="myform" method="post" onsubmit="return validateform()" >
+
+ <label for="name"><b>Name</b></label>
+
+ <input type="text" placeholder="Enter Name" name="name">
+
+   <label for="age"><b>Age</b></label>
+
+   <input type="text" placeholder="Enter age" name="age" >
+
+ <label for="email"><b>Email</b></label>
+     
+ <input type="text" placeholder="Enter Email" name="email" >
+
+ <label for="psw"><b>Password</b></label>
+
+ <input type="password" placeholder="Enter Password" name="psw">
+
+ <label for="psw-repeat"><b>Confirm Password</b></label>
+
+ <input type="password" placeholder="Confirm Password" name="psw_repeat" >
+
+   <br><br><br>
+
+     <button type="button" class="cancelbtn"><a href="index2.html">Cancel</a></button>
+
+     <button type="submit" class="signupbtn" >Sign Up</button>
+
+</form>
+
+   </div>
+
+ </body>
+
+</html>
+
+
+

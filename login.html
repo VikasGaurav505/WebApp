@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <script>
+        
+        function checkform()
+            {
+     var v_name=document.myform.name.value;
+     var password=document.myform.psw.value;
+     var email=document.myform.email.value;
+     var atpos=email.indexOf("@");
+     var dotpos=email.lastIndexOf(".");
+     
+     if (v_name==null || v_name=="")
+     {
+         alert("Name can't be blank");
+         document.myform.name.focus();
+         return false;
+     }
+
+
+     if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length)
+     {
+         alert("Please enter a valid e-mail address \n atpostion: "+atpos+"\n dotposition: "+dotpos);
+         document.myform.email.focus();
+         return false;
+     }
+
+     if(password.length<8)
+     {
+
+         alert("Password must be at least 8 characters long.");
+         document.myform.psw.focus();
+         return false;
+     }
+         
+
+  }
+
+     </script>
+        <style>
+        body{
+    background: url(imglogin1.jpg);
+    background-size: cover;
+    font-family: monospace;
+}
+
+.wrap{
+    max-width: 350px;
+    border-radius: :20px;
+    margin: auto;
+    background:rgba(0,0,0,0.8);
+    box-sizing: border-box;
+    padding: 40px;
+    color: #fff;
+    margin-top: 100px;
+            }
+
+input[type=text],input[type=password]{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 5px;
+    background: rgba(0,0,0,0.10);
+    outline: none;
+    border: none;
+    border-bottom: 1px dotted #fff;
+    color:#fff;
+    border-radius: 5px;
+    margin: 5px;
+    font-weight: bold;
+}
+ input[type=submit]{
+    width: 100%;
+    box-sizing: border-box;
+    padding:10px 0;
+    margin-top: 30px;
+    outline: none;
+    border: none;
+    background: #60adde;
+    opacity: 0.9;
+    border-radius: 20px;
+    font-size: 20px;
+    color: #fff;
+}
+
+input[type="button"]:hover{
+    background: #003366;
+    opacity: 0.7; 
+}
+        </style>
+    </head>
+<body>
+    <div class="wrap">
+    <h1>LOGIN </h1>
+    <form action="index1.html" name="myform" method="get" onsubmit="checkform()">
+      <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" required>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        <button type="submit">Login</button>
+    </form>    
+    </div>
+</body>
+</html>
